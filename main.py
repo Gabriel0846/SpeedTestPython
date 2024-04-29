@@ -34,4 +34,23 @@ l_logo_nome.place(x=75, y=10)
 l_logo_linha = Label(frame_logo,width=350, anchor=NW, font=('Ivy 1'), bg=co2)
 l_logo_linha.place(x=0, y=57)
 
+l_download = Label(frame_corpo,text='65.7', anchor=NW, font=('arial 28'), bg=co1, fg=co4)
+l_download.place(x=44, y=25)
+l_download = Label(frame_corpo,text='Mbps Download', anchor=NW, font=('Ivy 10'), bg=co1, fg=co4)
+l_download.place(x=30, y=70)
+
+imagem_setas = Image.open('setas.png')
+imagem_setas = imagem_setas.resize((70, 80))
+imagem_setas = ImageTk.PhotoImage(imagem_setas)
+l_logo_imagem = Label(frame_corpo, height=85, image=imagem_setas, compound=LEFT, padx=10, anchor='nw', font=('Ivy 16 bold'), bg=co1, fg=co3)
+l_logo_imagem.place(x=142.5, y=20)
+
+l_upload = Label(frame_corpo,text='65.7', anchor=NW, font=('arial 28'), bg=co1, fg=co4)
+l_upload.place(x=235, y=25)
+l_upload = Label(frame_corpo,text='Mbps Upload', anchor=NW, font=('Ivy 10'), bg=co1, fg=co4)
+l_upload.place(x=230, y=70)
+
+botao_testar = Button(frame_corpo,text='Iniciar teste', font=('Ivy 10 bold'), relief=RAISED, overrelief=RIDGE, bg=co5, fg=co1)
+botao_testar.place(x=135, y=100)
+
 janela.mainloop()
